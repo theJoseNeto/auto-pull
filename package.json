@@ -1,0 +1,23 @@
+{
+  "name": "auto-pull",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theJoseNeto/auto-pull.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theJoseNeto/auto-pull/issues"
+  },
+  "homepage": "https://github.com/theJoseNeto/auto-pull#readme",
+  "dependencies": {
+    "pm2": "^5.2.0"
+  }
+}
