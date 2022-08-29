@@ -1,23 +1,13 @@
-const { exec } = require('child_process');
-const {resolve} = require('path')
+require("dotenv").config();
+const TelegramBot = require("./src/modules/telegram-bot");
+
+const token = process.env.TELEGRAM_TOKEN; 
+
+const botAPIActions = new TelegramBot(token); 
+
+setInterval(async () => {
+    
+    botAPIActions.processUserMessageData().then(res => console.log(res));
 
 
-const repoList = {
-  get_jobs_bot: "",
-  welcome_bot: "",
-}
-exec('git pull', (error, stdout, stderr) => {
-
-  if (error) {
-    console.error(`error: ${error.message}`);
-    return;
-  }
-
-  if (stderr) {
-    console.error(`stderr: ${stderr}`);
-    return;
-  }
-  
-  console.log(`git pull Ok! Out:\n${stdout}`);
-
-});
+}, 1000);
